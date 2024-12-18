@@ -2,18 +2,145 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/imageview_moviePoster"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textview_movieName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Back to the Future I"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="516dp"
+        android:layout_height="223dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/BCK_TO_THE_FUT1" />
+
+    <TextView
+        android:id="@+id/textview_tagLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="He's broken the tine barrier"
+        app:layout_constraintStart_toStartOf="@+id/textview_movieName"
+        app:layout_constraintTop_toBottomOf="@+id/textview_movieName" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="111dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/Back_to_the_Future_Cover" />
+
+    <TextView
+        android:id="@+id/textview_status1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Icon"
+        app:layout_constraintEnd_toEndOf="@+id/imageview_status1"
+        app:layout_constraintStart_toStartOf="@+id/imageview_status1"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_status1" />
+
+    <ImageView
+        android:id="@+id/imageview_status1"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/imageview_status2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/stats_icon" />
+
+    <ImageView
+        android:id="@+id/imageview_status2"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/imageview_status3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageview_status1"
+        app:layout_constraintTop_toTopOf="@+id/imageview_status1"
+        app:srcCompat="@android:drawable/stat_sys_download" />
+
+    <ImageView
+        android:id="@+id/imageview_status3"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageview_status4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageview_status2"
+        app:layout_constraintTop_toTopOf="@+id/imageview_status1"
+        app:srcCompat="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/imageview_status4"
+        android:layout_width="55dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageview_status3"
+        app:layout_constraintTop_toTopOf="@+id/imageview_status1"
+        app:srcCompat="@drawable/audio_mixing" />
+
+    <TextView
+        android:id="@+id/textview_status2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Download"
+        app:layout_constraintEnd_toEndOf="@+id/imageview_status2"
+        app:layout_constraintStart_toStartOf="@+id/imageview_status2"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_status2" />
+
+    <TextView
+        android:id="@+id/textview_status3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Menu"
+        app:layout_constraintEnd_toEndOf="@+id/imageview_status3"
+        app:layout_constraintStart_toStartOf="@+id/imageview_status3"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_status3" />
+
+    <TextView
+        android:id="@+id/textview_status4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Audio"
+        app:layout_constraintEnd_toEndOf="@+id/imageview_status4"
+        app:layout_constraintStart_toStartOf="@+id/imageview_status4"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_status4" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_status1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
