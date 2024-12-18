@@ -5,18 +5,8 @@
     android:id="@+id/imageview_moviePoster"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#232323"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textview_movieName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Back to the Future I"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -25,16 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/BCK_TO_THE_FUT1" />
-
-    <TextView
-        android:id="@+id/textview_tagLine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="He's broken the tine barrier"
-        app:layout_constraintStart_toStartOf="@+id/textview_movieName"
-        app:layout_constraintTop_toBottomOf="@+id/textview_movieName" />
+        app:srcCompat="@drawable/bck_to_the_fut1" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -43,7 +24,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/Back_to_the_Future_Cover" />
+        app:srcCompat="@drawable/back_to_the_future_cover" />
 
     <TextView
         android:id="@+id/textview_status1"
@@ -51,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Icon"
+        android:textColor="#D6D6D6"
         app:layout_constraintEnd_toEndOf="@+id/imageview_status1"
         app:layout_constraintStart_toStartOf="@+id/imageview_status1"
         app:layout_constraintTop_toBottomOf="@+id/imageview_status1" />
@@ -106,6 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Download"
+        android:textColor="#D6D6D6"
         app:layout_constraintEnd_toEndOf="@+id/imageview_status2"
         app:layout_constraintStart_toStartOf="@+id/imageview_status2"
         app:layout_constraintTop_toBottomOf="@+id/imageview_status2" />
@@ -116,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Menu"
+        android:textColor="#D6D6D6"
         app:layout_constraintEnd_toEndOf="@+id/imageview_status3"
         app:layout_constraintStart_toStartOf="@+id/imageview_status3"
         app:layout_constraintTop_toBottomOf="@+id/imageview_status3" />
@@ -126,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Audio"
+        android:textColor="#D6D6D6"
         app:layout_constraintEnd_toEndOf="@+id/imageview_status4"
         app:layout_constraintStart_toStartOf="@+id/imageview_status4"
         app:layout_constraintTop_toBottomOf="@+id/imageview_status4" />
@@ -146,6 +131,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Plot Summary"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -155,6 +142,7 @@
         android:layout_height="121dp"
         android:layout_marginTop="8dp"
         android:text="Set in 1985, it follows Marty McFly (Fox), a teenager accidentally sent back to 1955 in a time-traveling DeLorean automobile built by his eccentric scientist friend Emmett &quot;Doc&quot; Brown (Lloyd), where he inadvertently prevents his future parents from falling in love – threatening his own existence – and is forced to reconcile them and somehow get back to the future."
+        android:textColor="#D6D6D6"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/textview_plotSummaryTittle" />
@@ -177,9 +165,11 @@
         android:id="@+id/imageview_starRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        tools:layout_editor_absoluteY="234dp" />
+        app:layout_constraintStart_toEndOf="@id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
         android:id="@+id/textview_starRating"
@@ -187,8 +177,38 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="8.8"
+        android:textColor="#D6D6D6"
         app:layout_constraintEnd_toEndOf="@+id/imageview_starRating"
         app:layout_constraintStart_toStartOf="@+id/imageview_starRating"
         app:layout_constraintTop_toBottomOf="@+id/imageview_starRating" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="textview_movieName,textview_tagLine" />
+
+    <TextView
+        android:id="@+id/textview_movieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Back to the Future I"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textview_tagLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="He's broken the tine barrier"
+        android:textColor="#D6D6D6"
+        app:layout_constraintStart_toStartOf="@+id/textview_movieName"
+        app:layout_constraintTop_toBottomOf="@+id/textview_movieName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
