@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bck_to_the_fut1" />
+        app:srcCompat="@drawable/BCK_TO_THE_FUT1" />
 
     <ImageView
         android:id="@+id/imageView4"
